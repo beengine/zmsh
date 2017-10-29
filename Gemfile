@@ -54,4 +54,8 @@ gem 'slim-rails'
 
 gem 'friendly_id'
 
+gem 'jquery-rails'
+
+gem 'font-awesome-rails'
+
 ruby "2.4.1"

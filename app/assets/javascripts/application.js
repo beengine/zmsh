@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require jquery.dropotron.min
 //= require jquery.scrollex.min
 //= require jquery.scrolly.min

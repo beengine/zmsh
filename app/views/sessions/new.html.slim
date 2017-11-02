@@ -1,3 +1,10 @@
-= form_tag session_path do
-  = password_field_tag :password
-  = submit_tag 'Ввійти'
+#main
+  .container
+    <h3>Вхід для адміна</h3>
+    section
+      = form_tag session_path do
+        .row class="uniform 50%"
+          .4u class="12u$(xsmall)"
+            = password_field_tag :password
+          .3u class="12u$(xsmall)"
+            = submit_tag 'Ввійти', class: 'special'

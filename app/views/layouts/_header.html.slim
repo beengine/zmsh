@@ -27,5 +27,7 @@ header#header
                 a href="#" Сторінка 4
       li
         a href="#" Сторінка 2
-      /li
-        a.button.special href="#"  Sign Up
+      - if admin?  
+        li
+          span
+            = link_to 'Вийти', session_path, method: :delete, class: 'button special'

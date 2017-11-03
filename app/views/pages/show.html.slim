@@ -1,4 +1,8 @@
-p#notice = notice
+#main.wrapper.style1
+  .container
+    p#notice = notice
+    h2= @page.title
+    section= @page.body.html_safe
 
 
 => link_to 'Edit', edit_page_path(@page)

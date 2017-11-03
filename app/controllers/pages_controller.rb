@@ -70,6 +70,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.fetch(:page, {})
+      params.require(:page).permit(:title, :nav_title, :body, :slug)
     end
 end

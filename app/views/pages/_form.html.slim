@@ -1,9 +1,21 @@
-= form_for @page do |f|
+- content_for(:js) do
+  script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.1/classic/ckeditor.js"
+= form_for @page, url: '/' do |f|
   - if @page.errors.any?
     #error_explanation
       h2 = "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
       ul
         - @page.errors.full_messages.each do |message|
           li = message
+
+  = f.label :title, 'Назва сторінки'
+  = f.text_field :title
+  = f.label :nav_title, 'Назва сторінки в навігації'
+  = f.text_field :nav_title
+  = f.label :slug, 'Адреса (латиницею)'
+  = f.text_field :slug
+  = f.label :body, 'Текст сторінки'
+  = f.text_area :body, id: 'editor'
+  script ClassicEditor.create( document.querySelector( '#editor' ) ).catch( error => {console.error( error ); } );
 
   .actions = f.submit

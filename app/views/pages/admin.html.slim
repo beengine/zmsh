@@ -1,0 +1,24 @@
+#main.wrapper.style1
+  .container
+    <h3>Усі сторінки</h3>
+    section
+      .table-wrapper
+        table
+          thead
+            tr
+              th Назва
+              th Назва для для навігації
+              th Посилання
+              th colspan="2" Дії
+          tbody
+            - @pages.each do |page|
+              tr
+                td= link_to page.title, page
+                td= page.nav_title
+                td= link_to page_url(page), page
+                td= link_to 'Редагувати', edit_page_path(page)
+                td= link_to 'Знищити', page, data: { confirm: 'Ви впевнені?' }, method: :delete
+
+      br
+
+      = link_to 'Нова сторінка', new_page_path, class: 'button special'

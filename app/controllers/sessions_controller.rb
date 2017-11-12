@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
   def new
-    redirect_to pages_path if admin?
+    redirect_to admin_pages_path if admin?
   end
 
   def create
     if params[:password] == Rails.application.secrets.password
       session[:login] = true
-      redirect_to pages_path
+      redirect_to admin_pages_path
     else
       render 'new'
     end

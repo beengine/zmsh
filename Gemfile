@@ -58,4 +58,11 @@ gem 'jquery-rails'
 
 gem 'font-awesome-rails'
 
+gem 'ckeditor', github: 'galetahub/ckeditor'
+
+gem 'carrierwave'
+gem 'mini_magick'
+
+gem 'cloudinary'
+
 ruby "2.4.1"

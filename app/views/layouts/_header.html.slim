@@ -1,33 +1,20 @@
 header#header
   h1#logo
-    a href="index.html" Заліщицька музична школа
+    = link_to 'Заліщицька музична школа', root_path
   nav#nav
     ul
       li
-        a href="index.html" Домівка
-      li
-        a href="#" Сторінка 1
+        a href="/history" Відділи
         ul
           li
-            a href="left-sidebar.html" Сторінка 1
+            a href="/history" Фортепіанний
           li
-            a href="right-sidebar.html" Сторінка 2
+            a href="/history" Смичковий
           li
-            a href="no-sidebar.html" Сторінка 3
-          li
-            a href="#" Сторінка 4
-            ul
-              li
-                a href="#" Сторінка 1
-              li
-                a href="#" Сторінка 2
-              li
-                a href="#" Сторінка 3
-              li
-                a href="#" Сторінка 4
+            a href="/history" Духовий
       li
-        a href="#" Сторінка 2
-      - if admin?  
+        a href="/history" Історія
+      - if admin?
         li
           span
             = link_to 'Вийти', session_path, method: :delete, class: 'button special'

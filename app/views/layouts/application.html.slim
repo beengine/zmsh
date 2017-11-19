@@ -6,8 +6,10 @@ html
     meta content="width=device-width, initial-scale=1" name="viewport" /
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag Ckeditor.cdn_url
+     - if admin?
+      = javascript_include_tag Ckeditor.cdn_url
   body class="#{yield(:body_class)}"
     #page-wrapper
       = render 'layouts/header'
       = yield
+      = render 'layouts/footer'

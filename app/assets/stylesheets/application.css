@@ -15,3 +15,7 @@
  *= require_self
  *= require font-awesome
  */
+
+div#cke_page_body{
+  color: #000;
+}

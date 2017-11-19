@@ -4,7 +4,8 @@
 
     == render 'form'
 
-    => link_to 'Show', @page
-    '|
-    =< link_to 'Back', admin_pages_path
+    - if admin?
+      => link_to 'Переглянути', @page
+      '|
+      =< link_to 'Назад', admin_pages_path
 

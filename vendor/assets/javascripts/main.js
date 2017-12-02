@@ -172,8 +172,14 @@
 					on = function() {
 
 						// Use main <img>'s src as this spotlight's background.
-							$this.css('background-image', 'url("' + $this.find('.image.main > img').attr('src') + '")');
-
+						// $this.css('background-image', 'url("' + $this.find('.image.main > img').attr('src') + '")');
+							var children = $this.find('.image.main').children();
+							var i = 0;
+							$this.css('background-image', 'url("' + $(children[i%children.length]).attr('src') + '")');
+							setInterval(function() {
+								i++;
+								$this.css('background-image', 'url("' + $(children[i%children.length]).attr('src') + '")')
+							}, 4000);
 						// Enable transitions (if supported).
 							if (skel.canUse('transition')) {
 

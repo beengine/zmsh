@@ -1,12 +1,13 @@
 doctype html
 html
   head
-    title ЗМШ
+    title #{yield(:title)}Заліщицька музична школа
     = csrf_meta_tags
+    meta name="description" content="Сайт Заліщицької державної музичної школи. Творчі колективи, відділи, події, історія музичної школи."
     meta content="width=device-width, initial-scale=1" name="viewport" /
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-     - if admin?
+    - if admin?
       = javascript_include_tag Ckeditor.cdn_url
   body class="#{yield(:body_class)}"
     #page-wrapper

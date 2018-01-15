@@ -1,0 +1,25 @@
+#main.wrapper.style1
+  .container
+    - if admin?
+      = link_to 'Створити нову подію', new_event_path(@event), class: 'button special'
+      hr
+
+    - @events.each do |event|
+      section
+        .row
+          .4u class="12u(small)"
+            span.image.fit
+              - if event.picture.present?
+                = cl_image_tag event.picture, height: 270
+              - else
+                img alt="" src="https://img-new.cgtrader.com/items/126645/b8d50d7b23/large/grand-piano-3d-model-max-obj-3ds-fbx-c4d-lwo-lw-lws.jpg" height="270" width="auto"
+          .8u class="12u(xsmall)"
+            h3= event.title
+            span style="color:#888"
+              i class="fa fa-calendar-o" aria-hidden="true"
+              = event.date.strftime(' %d.%m.%Y')
+            p= truncate(strip_tags(event.body), length: 200, separator: ' ')
+            = link_to 'Читати далі', event_path(event), class: 'button special'
+            - if admin?
+              = link_to "Редагувати", edit_event_path(event), class: 'button'
+      hr

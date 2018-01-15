@@ -16,6 +16,6 @@
  *= require font-awesome
  */
 
-div#cke_page_body{
+textarea.cke_source{
   color: #000;
 }

@@ -2,7 +2,7 @@
 development:
   cloud_name: dj0txi0vx
   api_key: '258494495541479'
-  api_secret: <%= ENV["CLOUDINARY_API_SECRET"] %>
+  api_secret: 'f7v3_6GH8JKgq7eXMl6MtN4Ekwg'
   enhance_image_tag: true
   static_image_support: false
 production:

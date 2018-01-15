@@ -1,0 +1,14 @@
+#main.wrapper.style1
+  .container
+    /p#notice = notice
+    header.major
+      h2= @event.title
+    section
+      a.image.fit
+        = cl_image_tag(@event.picture)
+      = @event.body.html_safe
+    - if admin?
+      => link_to 'Редагувати', edit_event_path(@event)
+      '|
+      =< link_to 'Назад', events_path
+

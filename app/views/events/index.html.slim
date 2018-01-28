@@ -10,7 +10,7 @@
           .4u class="12u(small)"
             span.image.fit
               - if event.picture.present?
-                = cl_image_tag event.picture, height: 270
+                = cl_image_tag event.picture, height: 270, crop: "scale"
               - else
                 img alt="" src="https://img-new.cgtrader.com/items/126645/b8d50d7b23/large/grand-piano-3d-model-max-obj-3ds-fbx-c4d-lwo-lw-lws.jpg" height="270" width="auto"
           .8u class="12u(xsmall)"

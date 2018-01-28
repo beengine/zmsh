@@ -60,9 +60,9 @@ section#three.spotlight.style3.left
 /! Four
 section#four.spotlight.style2.right
   span.image.fit.main
-    = cl_image_tag("DSC_8049_apssmv.jpg")
-    = cl_image_tag("DSC_8061_ycr5xf.jpg")
-    = cl_image_tag("DSC_8033_mzgfbw.jpg")
+    = cl_image_tag("DSC_8049_apssmv.jpg", :width=>1920, :crop=>"scale")
+    = cl_image_tag("DSC_8061_ycr5xf.jpg", :width=>1920, :crop=>"scale")
+    = cl_image_tag("DSC_8033_mzgfbw.jpg", :width=>1920, :crop=>"scale")
   .content
     header
       h2 Ансамбль скрипалів
@@ -72,12 +72,12 @@ section#four.spotlight.style2.right
       li
         a.button href="/string-ensemble" Дізнатися більше
   a.goto-next.scrolly href="#five"  Next
-/! Three
+/! Five
 section#five.spotlight.style3.left
   span.image.fit.main.bottom
-    = cl_image_tag("DSC_8290_bvxtny.jpg")
-    = cl_image_tag("DSC_8306_beli5n.jpg")
-    = cl_image_tag("DSC_8295_np7bdn.jpg")
+    = cl_image_tag("DSC_8290_bvxtny.jpg", :width=>1920, :crop=>"scale")
+    = cl_image_tag("DSC_8306_beli5n.jpg", :width=>1920, :crop=>"scale")
+    = cl_image_tag("DSC_8295_np7bdn.jpg", :width=>1920, :crop=>"scale")
     / = cl_image_tag("DSC_7304_lky46p.jpg", :width=>1920, :crop=>"scale")
   .content
     header
@@ -87,6 +87,21 @@ section#five.spotlight.style3.left
     ul.actions
       li
         a.button href="/guitar-ensemble" Дізнатися більше
+  a.goto-next.scrolly href="#six"  Next
+  /! Six
+section#six.spotlight.style2.right
+  span.image.fit.main
+    = cl_image_tag("img063_p28nhg.jpg", :width=>1920, :crop=>"scale")
+    = cl_image_tag("img064_ma4xc6.jpg", :width=>1920, :crop=>"scale")
+    = cl_image_tag("img065_qaiokb.jpg", :width=>1920, :crop=>"scale")
+  .content
+    header
+      h2 Ансамбль бандуристів
+      / p Nunc commodo accumsan eget id nisi eu col volutpat magna
+    p Діяльність ансамблю бандуристів наближує наших вихованців до пізнання багатого світу музики, ознайомлення з різними творами бандурної класики, сучасних композиторів, християнською спадщиною. Через чарівні барви української музики ансамбль бандуристів дарує естетичну, духовну насолоду і слухачам, і виконавцям.
+    ul.actions
+      li
+        a.button href="/bandura-ensemble" Дізнатися більше
   / a.goto-next.scrolly href="#four"  Next
 /section#four.wrapper.style1.special.fade-up
   .container

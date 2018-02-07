@@ -7,7 +7,7 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   include Cloudinary::CarrierWave
 
-  process resize_to_limit: [1200, nil]
+  process resize_to_limit: [1400, nil]
   # include CarrierWave::ImageScience
 
   # Choose what kind of storage to use for this uploader:

@@ -8,7 +8,7 @@ CKEDITOR.editorConfig = function( config )
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
-  config.height = '800px'
+  config.height = '500px'
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
@@ -33,6 +33,8 @@ CKEDITOR.editorConfig = function( config )
 
   config.allowedContent = true;
 
+  config.image_prefillDimensions = false;
+
   // Toolbar groups configuration.
   config.toolbar = [
     { name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source'] },
@@ -54,7 +56,7 @@ CKEDITOR.editorConfig = function( config )
     { name: 'insert', items: [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar' ] }
   ];
 };
-
+CKEDITOR.addCss('img{ width:200px; height:auto;}');
 CKEDITOR.on( 'dialogDefinition', function( ev )
 {
   var dialogName = ev.data.name;

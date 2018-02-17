@@ -48,7 +48,7 @@
 		}
 	}
 
-	$size-wrapper-pad-tb: 6em;
+	$size-wrapper-pad-tb: 3em;
 	$size-wrapper-pad-lr: 3em;
 
 /* Basic */
@@ -334,7 +334,7 @@
 		}
 
 		&.major {
-			margin: 0 0 (_size(element-margin) * 2) 0;
+			margin: 0 0 (_size(element-margin) * 1) 0;
 			position: relative;
 			text-align: center;
 

@@ -17,6 +17,3 @@
 //= require skel.min
 //= require util
 //= require main
-//= require rails-ujs
-
-//= require_tree .

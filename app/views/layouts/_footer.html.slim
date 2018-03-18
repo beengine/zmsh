@@ -23,3 +23,5 @@ footer#footer
     li
       | Design:
       a href="http://html5up.net"  HTML5 UP
+    - unless admin?
+      li= link_to 'Увійти', login_path

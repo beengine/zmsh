@@ -1,8 +1,9 @@
 #main.wrapper.style1
   .container
-    h3 Редагувати подію 
+    h3 Редагувати подію
     = render 'form'
     => link_to 'Переглянути', @event
     '|
-    =< link_to 'Назад', events_path
-
+    => link_to 'Назад', events_path
+    '|
+    = link_to "Видалити", event_path(@event), data: {confirm: 'Ви впевнені?'}, method: :delete

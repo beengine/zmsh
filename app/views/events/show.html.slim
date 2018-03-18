@@ -11,5 +11,6 @@
     - if admin?
       => link_to 'Редагувати', edit_event_path(@event)
       '|
-      =< link_to 'Назад', events_path
-
+      => link_to 'Назад', events_path
+      '|
+      = link_to "Видалити", event_path(@event), data: {confirm: 'Ви впевнені?'}, method: :delete

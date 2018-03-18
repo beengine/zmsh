@@ -22,4 +22,5 @@
             = link_to 'Читати далі', event_path(event), class: 'button special'
             - if admin?
               = link_to "Редагувати", edit_event_path(event), class: 'button'
+              = link_to "Видалити", event_path(event), data: {confirm: 'Ви впевнені?'}, method: :delete, class: 'button special'
       br
